@@ -1,0 +1,198 @@
+public class JavaZoo{
+	
+	public static void main(String[] args){
+		//Instantiate classes
+		Cage cage = new Cage();
+		ZooAnimal animal = new ZooAnimal();
+		ZooKeeper zooKeeper = new ZooKeeper();
+		//Setters and outputs
+		cage.setLength(20);
+		cage.setWidth(40);
+		cage.setHeight(20);
+		cage.setCleaned(true);
+		cage.setCovered(true);
+		System.out.println("The cage's length is " + cage.getLength() + " meters");
+		System.out.println("The cage's width is " + cage.getWidth() + " meters");
+		System.out.println("The cage's height is " + cage.getHeight() + " meters");
+		
+		
+		//for cage class if-else statements
+		if(cage.isCleaned()){
+			System.out.println("The cage is clean");
+		}
+		else{
+			System.out.println("The cage is dirty");
+		}
+		
+		if(cage.isCovered()){
+			System.out.println("The cage is covered");
+		}
+		else{
+			System.out.println("The cage is open");
+		}
+		//Seperator
+		
+		System.out.println("\t");
+		System.out.println("Now Entering Animal Class");
+		System.out.println("\t");
+		
+		//for Animal class outputs
+		
+		animal.setName("Zee");
+		animal.setType("Monkey");
+		animal.setAge(2);
+		animal.setHungry(true);
+		System.out.println("The animal's name is " + animal.getName());
+		System.out.println("The animal is a " + animal.getType());
+		System.out.println("The animal is " + animal.getAge() + " years old");
+		
+		//Animal if-else statements
+		
+		if(animal.isHungry()){
+			System.out.println("The animal named " + animal.getName() + " is hungry");
+		}
+		else{
+			System.out.println("The animal has been fed");
+		}
+		//Seperator
+		
+		System.out.println("\t");
+		System.out.println("Now Entering ZooKeeper Class");
+		System.out.println("\t");
+		
+		//for ZooKeeper class outputs
+		
+		zooKeeper.setName("John Doe");
+		zooKeeper.setTitle("Zoo Keeper Final Boss");
+		zooKeeper.setPayRate(69420.0D);
+		zooKeeper.setDegree(false);
+		System.out.println("The zoo keeper's name is " + zooKeeper.getName());
+		System.out.println("The zoo keeper is a "  + zooKeeper.getTitle());
+		System.out.println("The zoo keeper robs me " + zooKeeper.getPayRate() + " dollars everyday");
+		
+		//ZooKeeper if-else statements
+		
+		if(zooKeeper.hasDegree()){
+			System.out.println("The zoo keeper is a certified hood ninja from the bronx");
+		}
+		else{
+			System.out.println("The zookeeper named " + zooKeeper.getName() + " has no degree");
+		}
+		
+	}//end of main method
+	
+	public static class Cage{ //changed to public static
+		private int length;
+		private int width;
+		private int height;
+		private boolean covered;
+		private boolean cleaned;
+		
+		//Constructor
+		public Cage(){
+		}//end
+		
+		//changed return type to void
+		public void setLength(int length){
+			this.length = length;
+		}
+		public void setWidth(int width){
+			this.width = width;
+		}
+		public void setHeight(int height){
+			this.height = height;
+		}
+		public void setCleaned(boolean cleaned){
+			this.cleaned = cleaned;
+		}
+		public void setCovered(boolean covered){
+			this.covered = covered;
+		}
+		
+		public int getLength(){
+			return length;
+		}
+		public int getWidth(){
+			return width;
+		}
+		public int getHeight(){
+			return height;
+		}
+		public boolean isCleaned(){
+			return cleaned;
+		}
+		public boolean isCovered(){
+			return covered;
+		}
+	}//end of Cage class
+
+//Animal Class
+	public static class ZooAnimal{
+		
+		private String name;
+        private String type;
+        private int age;
+        private boolean hungry;
+//Setters
+        public void setName (String name){
+            this.name = name;
+        }
+        public void setType (String type){
+            this.type = type;
+        }
+        public void setAge (int age){
+            this.age = age;
+        }
+		public void setHungry (boolean hungry){
+			this.hungry = hungry;
+		}
+//Getters
+        public String getName(){
+            return name;
+        }
+        public String getType(){
+            return type;
+        }
+        public int getAge(){
+            return age;
+        }
+        public boolean isHungry(){
+            return hungry;
+        }
+	}
+	public static class ZooKeeper{
+
+        private String name;
+        private String title;
+        private double payRate;
+        private boolean degree;
+//Setters
+        public void setName (String name){
+            this.name = name;
+        }
+        public void setTitle (String title){
+            this.title = title;
+        }
+        public void setPayRate (double payRate){
+            this.payRate = payRate;
+        }
+		public void setDegree (boolean degree){
+			this.degree = degree;
+		}
+//Getters
+        public String getName(){
+            return name;
+        }
+        public String getTitle(){
+            return title;
+        }
+        public double getPayRate(){
+            return payRate;
+        }
+        public boolean hasDegree(){
+            return degree;
+        }
+
+
+	}
+}
